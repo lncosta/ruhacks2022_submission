@@ -15,5 +15,6 @@ Forest Images taken from:
 	https://commons.wikimedia.org/wiki/File:Nature-forest-trees-fog.jpg
 
 With changes made under a Creative Commons License. 
+Other game art by me.
 
-Demo Video Available At:
+Demo Video Available At: https://www.youtube.com/watch?v=DHNr1PKKx28&ab_channel=LuizaNogueiraCosta
