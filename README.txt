@@ -14,6 +14,6 @@ Forest Images taken from:
 	https://pixabay.com/photos/landscape-forest-dense-trees-5036611/
 	https://commons.wikimedia.org/wiki/File:Nature-forest-trees-fog.jpg
 
-With changes made. 
+With changes made under a Creative Commons License. 
 
 Demo Video Available At:
