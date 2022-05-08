@@ -62,6 +62,8 @@ scripts = [
 #18 - Choice F
     , " A cold feeling crawls up your spine, like fear injected into your veins. \n 'Can this connection be severed? Even if at the cost of her magic?' \n Surely what was learnt can be undone, you think. \n The Witch gives the suggestion a long and poignant consideration. \n 'If it was not so strong already, it might work. I cannot stomach the alternative.' \n Truth is, you do not feel qualified to choose for her, so you trace \n the metal curves of the brooch with your thumbs and chew the inside of your cheek. \n 'And can it be transferred to another?', you eventually ask. \n Your companion looks at you in sheer wonderment. \n\n 'Would you be willing to do so?' "
 
+#19 - Choice G
+    ,  " 'Gladly', repeats the Witch. 'And they call us heartless.' \n The weight of your decision hangs upon the both of you for a moment. \n 'It will be a while before she may attempt to visit. Can you bare the lack of goodbyes?' \n Deep down you know the question is rhetorical - there is no other choice to be made. \n 'For her sake, yes', you reply. \n Rain pours down with a fervor now, prattling agaisnt the windows \n and the ceramic tiles of the roof. \n 'You know, there is no need to be lonely', the Witch then continues, \n 'I would be happy to teach you as I did to her. Besides, I could use the conversations.' \n\n One one hand, she is a stranger. But likely just as lonely as you are. \n Would you like to stay?"
 
     , "The End!"]
 
@@ -83,11 +85,15 @@ bad_ending_D_2 = " Though a tunnel such as this might be safe enough to cross, t
 
 bad_ending_E_1 = " 'Does thou take me for a fool, girl?!', spits the goblin in a roaring tone. \n 'Never shall thou cross! Begone, or thou will meet thy end by my crossbow!' \n\n There are times when kindness does not take you far."
 
-bad_ending_1 = ""
+choice_F = ["Never", "Gladly"]
 
-ending_2 = ""
+bad_ending_1 = " Not all of us are, nor should be, selfless in all the matters of the heart. \n Though it breaks your heart to admit it, your sister's freedom could not come at the cost of yours. \n Your misery would be too grand. \n The Witch sobs aloud at your decision, but you make your way back to the village\n  with a basket of berries and a light heart. \n\n Your sister is so very glad to see you return home safe and sound. \n\n What comes to pass in the future is out of your hands - and you're content with it. "
 
-ending_3 = ""
+choice_G = ["No", "Yes"]
+
+ending_2 = " Though she seems like a loving soul, you were always a lone wolf. \n\n You continue your journey into the forest deep, learning from the trees and the birds \n your own kind of primeval magic. \n Missing your home is a small price to pay for the freedom you have gained. "
+
+ending_3 = " 'Yes', you reply after a moment of consideration, 'I think I would like that'. \n The Witch's face lights up. \n 'Oh, but I am glad! Come, come - let us have some tea. \n Tomorrow we shall commence your lessons!' \n\n A month later and your sister regains her strength steadily. \n She sends you letters and gifts delivered by crows, \n as well as warm regards from your parents. \n\n You once feared you'd be alone in the forest deep - but you aren't. \n \n Not at all.  "
 
 class Application:
 
@@ -98,7 +104,8 @@ class Application:
         self.mouse_position = None
         self.menu_page = False
         self.clock = None
-        self.background_color = (28, 68, 94)
+        #self.background_color = (28, 68, 94)
+        self.background_color = (0, 55, 41)
         self.window_color = (250, 250, 250)
 
         self.dialogue_box_image = None
@@ -135,7 +142,7 @@ class Application:
         else:
             raise ValueError("Wrong data type")
 
-        dialog_font = pygame.font.Font(None, 35)
+        dialog_font = pygame.font.Font(None, 34)
         width, height = dialog_font.size("l")
 
         line_height = -1
@@ -158,12 +165,12 @@ class Application:
         self.menu_page = True
         self.run = False
         self.clock = pygame.time.Clock()
-        self.font = pygame.font.Font(None, 35) #Change font here
+        self.font = pygame.font.Font(None, 30) #Change font here
         mixer.init()
         mixer.music.load("bensound-ofeliasdream (1).mp3")
         mixer.music.play(-1)
 
-        self.dialogue_box_image = pygame.image.load("Dialog Box.png").convert_alpha()
+        self.dialogue_box_image = pygame.image.load("dialogue_box3.png").convert_alpha()
 
 
     def process_event(self, event):
@@ -241,19 +248,25 @@ class Application:
         elif self.current_text_index == 12:
             self.game_state = "choice_E"
             self.current_text = scripts[self.current_text_index]
+        elif self.current_text_index == 18:
+            self.game_state = "choice_F"
+            self.current_text = scripts[self.current_text_index]
+        elif self.current_text_index == 19:
+            self.game_state = "choice_G"
+            self.current_text = scripts[self.current_text_index]
         else:
             self.game_state = "normal"
             self.current_text = scripts[self.current_text_index]
 
     def process_render(self):
-        if self.game_state == "end screen":
+        if self.game_state == "end screen" or self.game_state == "end screen 2":
             self.game_over_screen()
             return
         self.display_surf.fill(self.background_color)
-        left = 75
-        top = 50
-        width = self.width - 150
-        height = self.height - (50 * 3)
+        left = 25
+        top = 20
+        width = self.width - 60
+        height = self.height - (40 * 3)
         window_rect = pygame.Rect(left, top, width, height)
         self.dialogue_box_image = pygame.transform.scale(self.dialogue_box_image, (width, height))
         self.display_surf.blit(self.dialogue_box_image, window_rect)
@@ -334,8 +347,32 @@ class Application:
             surface = self.font.render(choice_E[1], True, self.purple_color)
             self.display_surf.blit(surface, text_rect_B)
             state = "choosing"
+        elif self.game_state == "choice_F":
+
+            pygame.draw.rect(self.display_surf, self.dark_purple_color, next_rect_A)
+            surface = self.font.render(choice_F[0], True, self.purple_color)
+            self.display_surf.blit(surface, text_rect_A)
+
+            pygame.draw.rect(self.display_surf, self.dark_purple_color, next_rect_B)
+            surface = self.font.render(choice_F[1], True, self.purple_color)
+            self.display_surf.blit(surface, text_rect_B)
+            state = "choosing"
+        elif self.game_state == "choice_G":
+
+            pygame.draw.rect(self.display_surf, self.dark_purple_color, next_rect_A)
+            surface = self.font.render(choice_G[0], True, self.purple_color)
+            self.display_surf.blit(surface, text_rect_A)
+
+            pygame.draw.rect(self.display_surf, self.dark_purple_color, next_rect_B)
+            surface = self.font.render(choice_G[1], True, self.purple_color)
+            self.display_surf.blit(surface, text_rect_B)
+            state = "choosing"
         elif self.game_state == "game over":
             state = "game over"
+            pygame.draw.rect(self.display_surf, self.dark_purple_color, next_rect)
+            self.display_surf.blit(surface, text_rect)
+        elif self.game_state == "done":
+            state = "end screen 2"
             pygame.draw.rect(self.display_surf, self.dark_purple_color, next_rect)
             self.display_surf.blit(surface, text_rect)
 
@@ -425,6 +462,35 @@ class Application:
                     else:
                         self.current_text_index += 1
                         self.set_game_state()
+            elif state == "choosing" and self.game_state == "choice_F":
+                button_click2 = next_rect_A.collidepoint(self.mouse_position[0], self.mouse_position[1])
+                button_click3 = next_rect_B.collidepoint(self.mouse_position[0], self.mouse_position[1])
+
+                self.mouse_position = None
+                if button_click2 == 1:
+                    print("Refused to stay.")
+                    self.current_text = bad_ending_1
+                    self.game_state = "done"
+                    state = "done"
+                elif button_click3 == 1:
+                    print("Stayed.")
+                    self.current_text_index += 1
+                    self.set_game_state()
+            elif state == "choosing" and self.game_state == "choice_G":
+                button_click2 = next_rect_A.collidepoint(self.mouse_position[0], self.mouse_position[1])
+                button_click3 = next_rect_B.collidepoint(self.mouse_position[0], self.mouse_position[1])
+
+                self.mouse_position = None
+                if button_click2 == 1:
+                    print("On your own.")
+                    self.current_text = ending_2
+                    self.game_state = "done"
+                    state = "done"
+                elif button_click3 == 1:
+                    print("With a friend.")
+                    self.current_text = ending_3
+                    self.game_state = "done"
+                    state = "done"
             else:
                 button_click = next_rect.collidepoint(self.mouse_position[0], self.mouse_position[1])
                 self.mouse_position = None
@@ -433,7 +499,10 @@ class Application:
                         self.current_text = "Game Over"
                         self.game_state = "end screen"
                         self.game_over_screen()
-
+                    elif self.game_state == "done":
+                        self.current_text = "The End!"
+                        self.game_state = "end screen 2"
+                        self.game_over_screen()
                     else:
                         if self.current_text_index == 4:
                             self.current_text_index += 1
@@ -447,10 +516,15 @@ class Application:
 
     def game_over_screen(self):
         self.display_surf.fill(self.background_color)
-        self.game_over_image = pygame.image.load("game_over_screen.png").convert_alpha()
+        if self.game_state == "end screen":
+            self.game_over_image = pygame.image.load("game_over_screen.png").convert_alpha()
+        elif self.game_state == "end screen 2" :
+            self.game_over_image = pygame.image.load("end_screen.png").convert_alpha()
+
         window_rect = pygame.Rect(0, 0, self.width, self.height)
         self.game_over_image = pygame.transform.scale(self.game_over_image, (self.width, self.height))
         self.display_surf.blit(self.game_over_image, window_rect)
+
         if not self.mouse_position == None:
             button_click = window_rect.collidepoint(self.mouse_position[0], self.mouse_position[1])
             self.mouse_position = None
