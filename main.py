@@ -23,7 +23,7 @@ scripts = [
 #1 - Choice A
     , " Spring has just begun to show its colors, \n so you put on your favorite dark woolen cloak \n and leather boots, \n praying it will not rain while you are out. \n To aid you on your journey, you pack some coffee, \n a variety of breads and cheeses, and your mother's hunting knife \n into your trusted satchel, a gift from your late grandmother. \n Wise beyond your years, you also ask the local apothecary for some medicinal herbs \n as well as a sewing needle and alcohol to clean any eventual wounds. \n One cannot be too careful, you think. \n They say the road is too dangerous for a girl of but twenty and fair to cross alone. \n\n Would you like to ask for help? "
 #2
-    , " With how unwilling to help the rest of your neighbors already proved themselves  \n to be,you decide not to risk involving someone else in this quest. \n You only have yourself to trust, right? \n Right. \n With your preparations done, you bid farewell to your sister, \n wishing her well. She gives you a golden brooch as a token of protection \n - it makes your fingertips tingle. \n You head eastward towards the forest. \n\n Though you have lived here all your life, this is unknown territory to you. \n The trees and soft grass, plus the faint birdsong in the distance, are friendly enough - \n but you cannot help but feel like someone is watching you wherever you go. \n How peculiar."
+    , " With how unwilling to help the rest of your neighbors already proved themselves  \n to be, you decide not to risk involving someone else in this quest. \n You only have yourself to trust, right? \n Right. \n With your preparations done, you bid farewell to your sister, \n wishing her well. She gives you a golden brooch as a token of protection \n - it makes your fingertips tingle. \n You head eastward towards the forest. \n\n Though you have lived here all your life, this is unknown territory to you. \n The trees and soft grass, plus the faint birdsong in the distance, are friendly enough - \n but you cannot help but feel like someone is watching you wherever you go. \n How peculiar."
 #3 - Choice B
     , " You stroll past a clearing where a pack of wolves rests idly in the shade. \n You notice that by their side there are quite a few tree branches, which could \n be useful later down the line. \n However, moving any closer might cause the animals to attack, \n and you are not sure if you are fast enough to run from them. \n\n What to do?"
 #4 - Branch from 3, got torch
@@ -39,12 +39,12 @@ scripts = [
 #9 - Got purple
     , " Though the purplish goo that falls from it might seem suspicious, \n you are 99% sure eating this won't make your ears fall off... \n\n ... Maybe 95% sure, actually. Oh well - onwards!"
 #10 - Choice D
-    , " You make it to the mountainside cliffs. \n From what the crone told you, you must cross to the other side \n in order to reach the witch's cottage alleged location. \n There is a narrow tunnel that supposedly leads to the other side, \n left behind by the old miners, \n but the path is too dark as it is. \n The only other way would be to try and climb the rock. \n\n Which would you like to try?"
+    , " You make it to the mountainside cliffs. \n From what the crone told you, you must cross to the other side \n in order to reach the witch's cottage in its alleged location. \n There is a narrow tunnel that supposedly leads to the other side, \n left behind by the old miners, \n but the path is too dark as it is. \n The only other way would be to try and climb the rock. \n\n Which would you like to try?"
 #11
     , " The tunnel is rightfully terrifying - full of rabid bats and creatures \n whose milky-yellow eyes stare at you from beneath the rocks. \n Luckily, with the branch you acquired before and a bit of fabric \n and oil from your inventory, you managed to make a torch. \n The blinding light seems to have kept you away from harm. \n You reach the other side of the mountains to find the sky of the early afternoon. \n\n Triumphant, you now stride with confidence. "
 #12 - Choice E
 
-    , " After walking for at least another three hours without anything eventful to note, \n it comes the time to make your way across the river. \n Like the old fairytales, you find a goblin keeping guard - \n the water is too violent, and the way around would take weeks, \n so your only chance at traversing is to persuade them to let you through. \n 'Thou must pau thy fares to cross, foul human', says the small and wrinkly creature. \n 'Twenty coins of silver at the least'. \n What little coin you have is scarcely enough, \n but folklore says they only need a fair trade. \n Mushrooms might suffice, perhaps so will the cheese you packed. \n\n Which will you part with?"
+    , " After walking for at least another three hours without anything eventful to note, \n it comes the time to make your way across the river. \n Like the old fairytales, you find a goblin keeping guard - \n the water is too violent, and the way around would take weeks, \n so your only chance at traversing is to persuade them to let you through. \n 'Thou must pay thy fares to cross, foul human', says the small and wrinkly creature. \n 'Twenty coins of silver at the least'. \n What little money you have is scarcely enough, \n but folklore says they only need a fair trade. \n Mushrooms might suffice, perhaps so will the cheese you packed. \n\n Which will you part with?"
 #13
     , " Your love for your sister knows no bounds \n - even sending a somewhat innocent critter to its untimely end. \n 'Oh, yes', drawls the gobling 'These are delicious! Thou may cross safely, child'. \n The good part of your conscience prays they have a strong stomach \n to deal with the poison or bitter taste, whatever may be. \n Are goblins immune to it? You can't tell. \n\n Either way, you at last reach the creek that is the most to the East. \n A cottage made of rocks and glass lies in sight."
 
@@ -63,7 +63,7 @@ scripts = [
     , " A cold feeling crawls up your spine, like fear injected into your veins. \n 'Can this connection be severed? Even if at the cost of her magic?' \n Surely what was learnt can be undone, you think. \n The Witch gives the suggestion a long and poignant consideration. \n 'If it was not so strong already, it might work. I cannot stomach the alternative.' \n Truth is, you do not feel qualified to choose for her, so you trace \n the metal curves of the brooch with your thumbs and chew the inside of your cheek. \n 'And can it be transferred to another?', you eventually ask. \n Your companion looks at you in sheer wonderment. \n\n 'Would you be willing to do so?' "
 
 #19 - Choice G
-    ,  " 'Gladly', repeats the Witch. 'And they call us heartless.' \n The weight of your decision hangs upon the both of you for a moment. \n 'It will be a while before she may attempt to visit. Can you bare the lack of goodbyes?' \n Deep down you know the question is rhetorical - there is no other choice to be made. \n 'For her sake, yes', you reply. \n Rain pours down with a fervor now, prattling agaisnt the windows \n and the ceramic tiles of the roof. \n 'You know, there is no need to be lonely', the Witch then continues, \n 'I would be happy to teach you as I did to her. Besides, I could use the conversations.' \n\n One one hand, she is a stranger. But likely just as lonely as you are. \n Would you like to stay?"
+    ,  " 'Gladly', repeats the Witch. 'And they call us heartless.' \n The weight of your decision hangs upon the both of you for a moment. \n 'It will be a while before she may attempt to visit. Can you bear the lack of goodbyes?' \n Deep down you know the question is rhetorical - there is no other choice to be made. \n 'For her sake, yes', you reply. \n Rain pours down with a fervor now, prattling agaisnt the windows \n and the ceramic tiles of the roof. \n 'You know, there is no need to be lonely', the Witch then continues, \n 'I would be happy to teach you as I did to her. Besides, I could use the conversations.' \n\n One one hand, she is a stranger. But likely just as lonely as you are. \n Would you like to stay?"
 
     , "The End!"]
 
@@ -87,11 +87,11 @@ bad_ending_E_1 = " 'Does thou take me for a fool, girl?!', spits the goblin in a
 
 choice_F = ["Never", "Gladly"]
 
-bad_ending_1 = " Not all of us are, nor should be, selfless in all the matters of the heart. \n Though it breaks your heart to admit it, your sister's freedom could not come at the cost of yours. \n Your misery would be too grand. \n The Witch sobs aloud at your decision, but you make your way back to the village\n  with a basket of berries and a light heart. \n\n Your sister is so very glad to see you return home safe and sound. \n\n What comes to pass in the future is out of your hands - and you're content with it. "
+bad_ending_1 = " Not all of us are, nor should be, selfless in all the matters of our lives. \n Though it breaks your heart to admit it, \n your sister's freedom could not come at the cost of yours. \n Your misery would be too grand. \n The Witch sobs aloud at your decision, but you make your way back to the village\n  with a basket of berries and a clear mind. \n\n Your sister is so very glad to see you return home safe and sound. \n\n What comes to pass in the future is out of your hands - and you're content with it. "
 
 choice_G = ["No", "Yes"]
 
-ending_2 = " Though she seems like a loving soul, you were always a lone wolf. \n\n You continue your journey into the forest deep, learning from the trees and the birds \n your own kind of primeval magic. \n Missing your home is a small price to pay for the freedom you have gained. "
+ending_2 = " Though she seems like a loving soul, you were always a lone wolf. \n\n You continue your journey into the forest deep, learning from the trees and the birds \n your own kind of primeval magic. \n Missing your home is a small price to pay for the freedom you have gained. \n \n Whenever the darkness scares you, you think of Leah, and all is right again. "
 
 ending_3 = " 'Yes', you reply after a moment of consideration, 'I think I would like that'. \n The Witch's face lights up. \n 'Oh, but I am glad! Come, come - let us have some tea. \n Tomorrow we shall commence your lessons!' \n\n A month later and your sister regains her strength steadily. \n She sends you letters and gifts delivered by crows, \n as well as warm regards from your parents. \n\n You once feared you'd be alone in the forest deep - but you aren't. \n \n Not at all.  "
 
@@ -187,7 +187,7 @@ class Application:
 
     def process_menu(self):
 
-        font = pygame_menu.font.FONT_COMIC_NEUE
+        font = pygame_menu.font.FONT_BEBAS
         myimage = pygame_menu.baseimage.BaseImage(
             image_path= "forest4.jpg",
             drawing_mode=pygame_menu.baseimage.IMAGE_MODE_FILL
@@ -203,6 +203,7 @@ class Application:
                         title_background_color=(0, 0, 0),
                         widget_font=font,
                         widget_font_size = 120,
+                        title_font = pygame_menu.font.FONT_OPEN_SANS_ITALIC,
                         title_font_color=golden_color,
                         title_bar_style=pygame_menu.widgets.MENUBAR_STYLE_ADAPTIVE,
                         title_font_shadow=True,
